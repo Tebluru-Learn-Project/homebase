@@ -1,439 +1,444 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singkil Project | Software Development & IT Solutions</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                            900: '#064e3b',
-                            dark: '#0b132b',
-                            card: '#1c2541',
-                            accent: '#00f5d4'
-                        }
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="icon-tf.png">
+  <title>Singkil Project | Software Development & IT Solutions</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+              dark: '#0b132b',
+              card: '#1c2541',
+              accent: '#00f5d4'
             }
+          }
         }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b132b;
-            color: #e2e8f0;
-        }
-        /* Custom smooth gradient glow */
-        .glow-effect {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(11, 19, 43, 0) 70%);
-            z-index: 0;
-            pointer-events: none;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b132b;
+      color: #e2e8f0;
+    }
+
+    /* Custom smooth gradient glow */
+    .glow-effect {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(11, 19, 43, 0) 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body class="bg-[#0b132b] text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
 
-    <!-- Background Ambient Glows -->
-    <div class="glow-effect top-0 left-1/4 -translate-x-1/2"></div>
-    <div class="glow-effect top-[40%] right-10"></div>
+  <!-- Background Ambient Glows -->
+  <div class="glow-effect top-0 left-1/4 -translate-x-1/2"></div>
+  <div class="glow-effect top-[40%] right-10"></div>
 
-    <!-- HEADER / NAVBAR -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0b132b]/80 border-b border-slate-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo Brand -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-network-wired text-white text-lg"></i>
-                </div>
-                <div>
-                    <span class="text-lg font-bold tracking-wider text-white block leading-tight">SINGKIL <span class="text-emerald-400">PROJECT</span></span>
-                    <span class="text-[10px] uppercase tracking-widest text-emerald-300 font-medium">Connected Ideas</span>
-                </div>
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0b132b]/80 border-b border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Brand -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 to-teal-400 flex items-center justify-center group-hover:scale-105 transition-transform">
+          <img src="icon-tf.png" alt="Singkil Project Logo" class="w-11 h-11" />
+        </div>
+        <div>
+          <span class="text-lg font-bold tracking-wider text-white block leading-tight">SINGKIL <span class="text-emerald-400">PROJECT</span></span>
+          <span class="text-[10px] uppercase tracking-widest text-emerald-300 font-medium">Connected Ideas</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#layanan" class="hover:text-emerald-400 transition-colors">Layanan</a>
+        <a href="#tentang" class="hover:text-emerald-400 transition-colors">Tentang</a>
+        <a href="#teknologi" class="hover:text-emerald-400 transition-colors">Tech Stack</a>
+        <a href="#skema" class="hover:text-emerald-400 transition-colors">Kerja Sama</a>
+        <a href="#kontak" class="hover:text-emerald-400 transition-colors">Kontak</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://github.com/khoirul-amin" target="_blank" class="text-slate-300 hover:text-emerald-400 transition-colors text-lg" title="GitHub Portfolio">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://wa.me/6287819454578?text=Halo%20Singkil%20Project,%20saya%20tertarik%20dengan%20layanan%20pengembangan%20software." target="_blank" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-900/20 transition-all transform hover:-translate-y-0.5">
+          <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1c2541] border-b border-slate-800 px-6 py-4 space-y-3">
+      <a href="#layanan" class="block text-slate-300 hover:text-emerald-400 py-1">Layanan</a>
+      <a href="#tentang" class="block text-slate-300 hover:text-emerald-400 py-1">Tentang</a>
+      <a href="#teknologi" class="block text-slate-300 hover:text-emerald-400 py-1">Tech Stack</a>
+      <a href="#skema" class="block text-slate-300 hover:text-emerald-400 py-1">Kerja Sama</a>
+      <a href="#kontak" class="block text-slate-300 hover:text-emerald-400 py-1">Kontak</a>
+      <div class="pt-2 flex items-center space-x-4">
+        <a href="https://github.com/khoirul-amin" target="_blank" class="text-slate-300 hover:text-emerald-400 text-xl"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://wa.me/6287819454578" target="_blank" class="bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-20 pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <!-- Badge -->
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6 shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Software Development & IT Solutions</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          Wujudkan Solusi Digital & Sistem Informasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Tepat Sasaran</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-light">
+          Solusi digital modern untuk administrasi, pengelolaan data, inventaris, dan efisiensi operasional perusahaan Anda. Dirancang modular dan profesional bersama <strong class="text-white font-medium">Singkil Project</strong>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/6287819454578?text=Halo%20Khoirul%20Amin,%20saya%20ingin%20berdiskusi%20mengenai%20proyek%20software." target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-3">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Hubungi via WhatsApp</span>
+          </a>
+          <a href="https://github.com/khoirul-amin" target="_blank" class="w-full sm:w-auto bg-[#1c2541] hover:bg-[#253259] text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3">
+            <i class="fa-brands fa-github text-xl text-emerald-400"></i>
+            <span>Lihat Portfolio &amp; GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview Wireframe Illustration Mockup -->
+      <div class="mt-16 max-w-5xl mx-auto bg-[#1c2541] border border-slate-800 rounded-2xl shadow-2xl p-4 sm:p-6 relative">
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+          <div class="flex space-x-2">
+            <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+          </div>
+          <div class="text-xs text-slate-400 font-mono">dashboard-preview-singkil.app</div>
+          <div class="text-xs text-emerald-400 font-medium">Connected Ideas v1.0</div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 mb-1">Total Efisiensi Kerja</div>
+            <div class="text-2xl font-bold text-white">+85%</div>
+            <div class="text-[11px] text-emerald-400 mt-2"><i class="fa-solid fa-arrow-trend-up"></i> Mengurangi proses manual</div>
+          </div>
+          <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 mb-1">Struktur Data &amp; Laporan</div>
+            <div class="text-2xl font-bold text-white">100% Akurat</div>
+            <div class="text-[11px] text-teal-400 mt-2"><i class="fa-solid fa-database"></i> MySQL &amp; PostgreSQL Ready</div>
+          </div>
+          <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 mb-1">Teknologi Utama</div>
+            <div class="text-lg font-bold text-white">Laravel &amp; React</div>
+            <div class="text-[11px] text-emerald-300 mt-2"><i class="fa-solid fa-code"></i> Modern Web Stack</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI & VALUE CARDS -->
+  <section id="tentang" class="py-20 bg-[#111936] border-y border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Tentang Studio Kami</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pendekatan Konsultatif &amp; Kemampuan Teknis</h3>
+        <p class="text-slate-300 leading-relaxed">
+          <strong>Singkil Project</strong> hadir untuk membantu perusahaan merancang, membangun, dan mengembangkan solusi digital yang relevan dengan alur kerja sehari-hari, dari administrasi sederhana hingga aplikasi internal yang terintegrasi.
+        </p>
+      </div>
+
+      <!-- Value Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Efisiensi Kerja</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Mengurangi pekerjaan berulang serta mengotomatisasi proses manual di perusahaan.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Data Terstruktur</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Memudahkan pencarian data, rekapitulasi otomatis, dan pelaporan yang akurat.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Sesuai Kebutuhan</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Fitur aplikasi dikembangkan persis mengikuti standar proses bisnis Anda.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-stairs"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Dapat Dikembangkan</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Sistem dirancang modular dan fleksibel untuk bertumbuh bersama bisnis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUANG LINGKUP LAYANAN -->
+  <section id="layanan" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Layanan Kami</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ruang Lingkup Pengembangan Software</h3>
+        <p class="text-slate-300">Solusi menyeluruh dari hulu ke hilir untuk mendukung digitalisasi operasional bisnis Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
+          <div class="w-14 h-14 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-building-user"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white mb-3">Sistem Administrasi &amp; Backoffice</h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengelolaan data karyawan, pelanggan &amp; vendor</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengelolaan dokumen, arsip digital &amp; data master</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Formulir internal &amp; alur persetujuan digital</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
+          <div class="w-14 h-14 rounded-xl bg-teal-600/20 text-teal-400 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white mb-3">Pengolahan Data &amp; Pelaporan</h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Import, validasi, dan export data Excel/CSV</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Rekapitulasi data &amp; laporan otomatis instan</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Dashboard monitoring, pencarian &amp; filter canggih</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
+          <div class="w-14 h-14 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white mb-3">Sistem Operasional &amp; Inventaris</h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pencatatan aset, stok &amp; pergerakan barang</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Monitoring pekerjaan, aktivitas &amp; proyek</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pencatatan transaksi &amp; status operasional</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
+          <div class="w-14 h-14 rounded-xl bg-teal-600/20 text-teal-400 flex items-center justify-center text-2xl shrink-0">
+            <i class="fa-solid fa-code-merge"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white mb-3">Pengembangan Web &amp; REST API</h4>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Aplikasi berbasis web kustom sesuai kebutuhan</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengembangan REST API &amp; integrasi antar sistem</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Peningkatan fitur &amp; modernisasi aplikasi lama</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="teknologi" class="py-20 bg-[#111936] border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Teknologi Pilihan</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Tech Stack Handal &amp; Teruji</h3>
+      <p class="text-slate-300 max-w-2xl mx-auto mb-16">Kami memilih teknologi terbaik yang sesuai dengan skala, anggaran, dan infrastruktur yang Anda miliki.</p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <!-- Laravel -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-brands fa-laravel text-4xl text-rose-500 mb-3"></i>
+          <span class="text-sm font-semibold text-white">Laravel</span>
+          <span class="text-[11px] text-slate-400">Backend PHP</span>
+        </div>
+        <!-- Node.js -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-brands fa-node-js text-4xl text-emerald-500 mb-3"></i>
+          <span class="text-sm font-semibold text-white">Node.js</span>
+          <span class="text-[11px] text-slate-400">Express Backend</span>
+        </div>
+        <!-- React -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-brands fa-react text-4xl text-cyan-400 mb-3"></i>
+          <span class="text-sm font-semibold text-white">React.js</span>
+          <span class="text-[11px] text-slate-400">Modern Frontend</span>
+        </div>
+        <!-- MySQL -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-solid fa-database text-4xl text-blue-400 mb-3"></i>
+          <span class="text-sm font-semibold text-white">MySQL</span>
+          <span class="text-[11px] text-slate-400">Relational DB</span>
+        </div>
+        <!-- PostgreSQL -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-solid fa-server text-4xl text-indigo-400 mb-3"></i>
+          <span class="text-sm font-semibold text-white">PostgreSQL</span>
+          <span class="text-[11px] text-slate-400">Advanced DB</span>
+        </div>
+        <!-- Git -->
+        <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
+          <i class="fa-brands fa-git-alt text-4xl text-amber-500 mb-3"></i>
+          <span class="text-sm font-semibold text-white">GitHub</span>
+          <span class="text-[11px] text-slate-400">Version Control</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKEMA KERJA SAMA -->
+  <section id="skema" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Fleksibel &amp; Transparan</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pilihan Skema Kerja Sama</h3>
+        <p class="text-slate-300">Pilih model kolaborasi yang paling sesuai dengan kebutuhan dan skala proyek Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Skema 1 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
+          <div class="text-emerald-400 font-mono text-sm font-bold mb-2">01 / PROJECT</div>
+          <h4 class="text-lg font-semibold text-white mb-2">Project-based</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Pengerjaan tuntas berdasarkan ruang lingkup, target fitur, dan timeline proyek yang disepakati.</p>
+        </div>
+        <!-- Skema 2 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
+          <div class="text-teal-400 font-mono text-sm font-bold mb-2">02 / FLEXIBLE</div>
+          <h4 class="text-lg font-semibold text-white mb-2">Freelance / Part-time</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Dukungan pengembangan sistem sesuai kebutuhan dengan alokasi waktu paruh waktu.</p>
+        </div>
+        <!-- Skema 3 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
+          <div class="text-emerald-400 font-mono text-sm font-bold mb-2">03 / SUPPORT</div>
+          <h4 class="text-lg font-semibold text-white mb-2">Maintenance</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Layanan pemeliharaan sistem, perbaikan bug, pemantauan performa, dan update berkala.</p>
+        </div>
+        <!-- Skema 4 -->
+        <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
+          <div class="text-teal-400 font-mono text-sm font-bold mb-2">04 / ADVISORY</div>
+          <h4 class="text-lg font-semibold text-white mb-2">IT Consulting</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Diskusi kebutuhan, evaluasi alur proses kerja, dan rekomendasi solusi digital terbaik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK & FOOTER -->
+  <section id="kontak" class="py-20 bg-[#111936] border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-[#1c2541] border border-emerald-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden mb-16">
+        <div class="relative z-10 max-w-2xl">
+          <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Mulai Konsultasi</h2>
+          <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Siap Meningkatkan Efisiensi Bisnis Anda?</h3>
+          <p class="text-slate-300 mb-8">Diskusikan kebutuhan software perusahaan Anda bersama kami. Dapatkan estimasi penawaran yang transparan dan terarah.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/6287819454578?text=Halo%20Singkil%20Project,%20saya%20ingin%20berdiskusi%20mengenai%20proyek%20IT." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center space-x-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>087819454578</span>
             </a>
+            <a href="mailto:khoirulamin605@gmail.com" class="bg-[#0b132b] hover:bg-slate-900 text-white border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center space-x-2">
+              <i class="fa-solid fa-envelope text-emerald-400 text-lg"></i>
+              <span>khoirulamin605@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-            <!-- Desktop Nav Menu -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#layanan" class="hover:text-emerald-400 transition-colors">Layanan</a>
-                <a href="#tentang" class="hover:text-emerald-400 transition-colors">Tentang</a>
-                <a href="#teknologi" class="hover:text-emerald-400 transition-colors">Tech Stack</a>
-                <a href="#skema" class="hover:text-emerald-400 transition-colors">Kerja Sama</a>
-                <a href="#kontak" class="hover:text-emerald-400 transition-colors">Kontak</a>
-            </nav>
-
-            <!-- Action Buttons -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="https://github.com/khoirul-amin" target="_blank" class="text-slate-300 hover:text-emerald-400 transition-colors text-lg" title="GitHub Portfolio">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://wa.me/6287819454578?text=Halo%20Singkil%20Project,%20saya%20tertarik%20dengan%20layanan%20pengembangan%20software." target="_blank" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-900/20 transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+      <!-- Footer Bottom -->
+      <div class="flex flex-col md:flex-row items-center justify-between border-t border-slate-800 pt-8">
+        <div class="flex items-center space-x-3 mb-4 md:mb-0">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white">
+            <i class="fa-solid fa-network-wired text-sm"></i>
+          </div>
+          <div>
+            <span class="text-sm font-bold text-white">SINGKIL PROJECT</span>
+            <span class="text-[10px] text-slate-400 block">Connected Ideas • Software Development &amp; IT Solutions</span>
+          </div>
         </div>
 
-        <!-- Mobile Menu Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#1c2541] border-b border-slate-800 px-6 py-4 space-y-3">
-            <a href="#layanan" class="block text-slate-300 hover:text-emerald-400 py-1">Layanan</a>
-            <a href="#tentang" class="block text-slate-300 hover:text-emerald-400 py-1">Tentang</a>
-            <a href="#teknologi" class="block text-slate-300 hover:text-emerald-400 py-1">Tech Stack</a>
-            <a href="#skema" class="block text-slate-300 hover:text-emerald-400 py-1">Kerja Sama</a>
-            <a href="#kontak" class="block text-slate-300 hover:text-emerald-400 py-1">Kontak</a>
-            <div class="pt-2 flex items-center space-x-4">
-                <a href="https://github.com/khoirul-amin" target="_blank" class="text-slate-300 hover:text-emerald-400 text-xl"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://wa.me/6287819454578" target="_blank" class="bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">WhatsApp</a>
-            </div>
+        <div class="flex items-center space-x-6 text-sm text-slate-400">
+          <a href="https://github.com/khoirul-amin" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-github text-lg mr-1"></i> GitHub (khoirul-amin)</a>
+          <a href="https://wa.me/6287819454578" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp text-lg mr-1"></i> WhatsApp</a>
         </div>
-    </header>
+      </div>
+      <div class="text-center text-xs text-slate-500 mt-8">
+        &copy; 2026 Singkil Project. All rights reserved. Designed for professional software offerings.
+      </div>
+    </div>
+  </section>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-20 pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <!-- Badge -->
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6 shadow-inner">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>Software Development & IT Solutions</span>
-                </div>
-                
-                <!-- Heading -->
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                    Wujudkan Solusi Digital & Sistem Informasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Tepat Sasaran</span>
-                </h1>
-                
-                <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-light">
-                    Solusi digital modern untuk administrasi, pengelolaan data, inventaris, dan efisiensi operasional perusahaan Anda. Dirancang modular dan profesional bersama <strong class="text-white font-medium">Singkil Project</strong>.
-                </p>
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://wa.me/6287819454578?text=Halo%20Khoirul%20Amin,%20saya%20ingin%20berdiskusi%20mengenai%20proyek%20software." target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-3">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>Hubungi via WhatsApp</span>
-                    </a>
-                    <a href="https://github.com/khoirul-amin" target="_blank" class="w-full sm:w-auto bg-[#1c2541] hover:bg-[#253259] text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3">
-                        <i class="fa-brands fa-github text-xl text-emerald-400"></i>
-                        <span>Lihat Portfolio &amp; GitHub</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Preview Wireframe Illustration Mockup -->
-            <div class="mt-16 max-w-5xl mx-auto bg-[#1c2541] border border-slate-800 rounded-2xl shadow-2xl p-4 sm:p-6 relative">
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
-                    <div class="flex space-x-2">
-                        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
-                    </div>
-                    <div class="text-xs text-slate-400 font-mono">dashboard-preview-singkil.app</div>
-                    <div class="text-xs text-emerald-400 font-medium">Connected Ideas v1.0</div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
-                        <div class="text-xs text-slate-400 mb-1">Total Efisiensi Kerja</div>
-                        <div class="text-2xl font-bold text-white">+85%</div>
-                        <div class="text-[11px] text-emerald-400 mt-2"><i class="fa-solid fa-arrow-trend-up"></i> Mengurangi proses manual</div>
-                    </div>
-                    <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
-                        <div class="text-xs text-slate-400 mb-1">Struktur Data &amp; Laporan</div>
-                        <div class="text-2xl font-bold text-white">100% Akurat</div>
-                        <div class="text-[11px] text-teal-400 mt-2"><i class="fa-solid fa-database"></i> MySQL &amp; PostgreSQL Ready</div>
-                    </div>
-                    <div class="bg-[#0b132b] p-4 rounded-xl border border-slate-800">
-                        <div class="text-xs text-slate-400 mb-1">Teknologi Utama</div>
-                        <div class="text-lg font-bold text-white">Laravel &amp; React</div>
-                        <div class="text-[11px] text-emerald-300 mt-2"><i class="fa-solid fa-code"></i> Modern Web Stack</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TENTANG KAMI & VALUE CARDS -->
-    <section id="tentang" class="py-20 bg-[#111936] border-y border-slate-800/60 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Tentang Studio Kami</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pendekatan Konsultatif &amp; Kemampuan Teknis</h3>
-                <p class="text-slate-300 leading-relaxed">
-                    <strong>Singkil Project</strong> hadir untuk membantu perusahaan merancang, membangun, dan mengembangkan solusi digital yang relevan dengan alur kerja sehari-hari, dari administrasi sederhana hingga aplikasi internal yang terintegrasi.
-                </p>
-            </div>
-
-            <!-- Value Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Efisiensi Kerja</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Mengurangi pekerjaan berulang serta mengotomatisasi proses manual di perusahaan.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Data Terstruktur</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Memudahkan pencarian data, rekapitulasi otomatis, dan pelaporan yang akurat.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-sliders"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Sesuai Kebutuhan</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Fitur aplikasi dikembangkan persis mengikuti standar proses bisnis Anda.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl transition-all group">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-stairs"></i>
-                    </div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Dapat Dikembangkan</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Sistem dirancang modular dan fleksibel untuk bertumbuh bersama bisnis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RUANG LINGKUP LAYANAN -->
-    <section id="layanan" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Layanan Kami</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ruang Lingkup Pengembangan Software</h3>
-                <p class="text-slate-300">Solusi menyeluruh dari hulu ke hilir untuk mendukung digitalisasi operasional bisnis Anda.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-building-user"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-white mb-3">Sistem Administrasi &amp; Backoffice</h4>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengelolaan data karyawan, pelanggan &amp; vendor</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengelolaan dokumen, arsip digital &amp; data master</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Formulir internal &amp; alur persetujuan digital</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
-                    <div class="w-14 h-14 rounded-xl bg-teal-600/20 text-teal-400 flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-file-excel"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-white mb-3">Pengolahan Data &amp; Pelaporan</h4>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Import, validasi, dan export data Excel/CSV</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Rekapitulasi data &amp; laporan otomatis instan</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Dashboard monitoring, pencarian &amp; filter canggih</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
-                    <div class="w-14 h-14 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-white mb-3">Sistem Operasional &amp; Inventaris</h4>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pencatatan aset, stok &amp; pergerakan barang</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Monitoring pekerjaan, aktivitas &amp; proyek</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pencatatan transaksi &amp; status operasional</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-8 rounded-2xl flex items-start space-x-5">
-                    <div class="w-14 h-14 rounded-xl bg-teal-600/20 text-teal-400 flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-code-merge"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-white mb-3">Pengembangan Web &amp; REST API</h4>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Aplikasi berbasis web kustom sesuai kebutuhan</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Pengembangan REST API &amp; integrasi antar sistem</li>
-                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Peningkatan fitur &amp; modernisasi aplikasi lama</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section id="teknologi" class="py-20 bg-[#111936] border-y border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Teknologi Pilihan</h2>
-            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Tech Stack Handal &amp; Teruji</h3>
-            <p class="text-slate-300 max-w-2xl mx-auto mb-16">Kami memilih teknologi terbaik yang sesuai dengan skala, anggaran, dan infrastruktur yang Anda miliki.</p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                <!-- Laravel -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-brands fa-laravel text-4xl text-rose-500 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">Laravel</span>
-                    <span class="text-[11px] text-slate-400">Backend PHP</span>
-                </div>
-                <!-- Node.js -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-brands fa-node-js text-4xl text-emerald-500 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">Node.js</span>
-                    <span class="text-[11px] text-slate-400">Express Backend</span>
-                </div>
-                <!-- React -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-brands fa-react text-4xl text-cyan-400 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">React.js</span>
-                    <span class="text-[11px] text-slate-400">Modern Frontend</span>
-                </div>
-                <!-- MySQL -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-solid fa-database text-4xl text-blue-400 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">MySQL</span>
-                    <span class="text-[11px] text-slate-400">Relational DB</span>
-                </div>
-                <!-- PostgreSQL -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-solid fa-server text-4xl text-indigo-400 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">PostgreSQL</span>
-                    <span class="text-[11px] text-slate-400">Advanced DB</span>
-                </div>
-                <!-- Git -->
-                <div class="bg-[#1c2541] border border-slate-800 hover:border-emerald-500/50 p-6 rounded-2xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-brands fa-git-alt text-4xl text-amber-500 mb-3"></i>
-                    <span class="text-sm font-semibold text-white">GitHub</span>
-                    <span class="text-[11px] text-slate-400">Version Control</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKEMA KERJA SAMA -->
-    <section id="skema" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Fleksibel &amp; Transparan</h2>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pilihan Skema Kerja Sama</h3>
-                <p class="text-slate-300">Pilih model kolaborasi yang paling sesuai dengan kebutuhan dan skala proyek Anda.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Skema 1 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
-                    <div class="text-emerald-400 font-mono text-sm font-bold mb-2">01 / PROJECT</div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Project-based</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Pengerjaan tuntas berdasarkan ruang lingkup, target fitur, dan timeline proyek yang disepakati.</p>
-                </div>
-                <!-- Skema 2 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
-                    <div class="text-teal-400 font-mono text-sm font-bold mb-2">02 / FLEXIBLE</div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Freelance / Part-time</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Dukungan pengembangan sistem sesuai kebutuhan dengan alokasi waktu paruh waktu.</p>
-                </div>
-                <!-- Skema 3 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
-                    <div class="text-emerald-400 font-mono text-sm font-bold mb-2">03 / SUPPORT</div>
-                    <h4 class="text-lg font-semibold text-white mb-2">Maintenance</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Layanan pemeliharaan sistem, perbaikan bug, pemantauan performa, dan update berkala.</p>
-                </div>
-                <!-- Skema 4 -->
-                <div class="bg-[#1c2541] border border-slate-800 p-6 rounded-2xl">
-                    <div class="text-teal-400 font-mono text-sm font-bold mb-2">04 / ADVISORY</div>
-                    <h4 class="text-lg font-semibold text-white mb-2">IT Consulting</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">Diskusi kebutuhan, evaluasi alur proses kerja, dan rekomendasi solusi digital terbaik.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KONTAK & FOOTER -->
-    <section id="kontak" class="py-20 bg-[#111936] border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-[#1c2541] border border-emerald-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden mb-16">
-                <div class="relative z-10 max-w-2xl">
-                    <h2 class="text-xs font-bold tracking-widest text-emerald-400 uppercase mb-3">Mulai Konsultasi</h2>
-                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Siap Meningkatkan Efisiensi Bisnis Anda?</h3>
-                    <p class="text-slate-300 mb-8">Diskusikan kebutuhan software perusahaan Anda bersama kami. Dapatkan estimasi penawaran yang transparan dan terarah.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://wa.me/6287819454578?text=Halo%20Singkil%20Project,%20saya%20ingin%20berdiskusi%20mengenai%20proyek%20IT." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-lg"></i>
-                            <span>087819454578</span>
-                        </a>
-                        <a href="mailto:khoirulamin605@gmail.com" class="bg-[#0b132b] hover:bg-slate-900 text-white border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center space-x-2">
-                            <i class="fa-solid fa-envelope text-emerald-400 text-lg"></i>
-                            <span>khoirulamin605@gmail.com</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="flex flex-col md:flex-row items-center justify-between border-t border-slate-800 pt-8">
-                <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white">
-                        <i class="fa-solid fa-network-wired text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-bold text-white">SINGKIL PROJECT</span>
-                        <span class="text-[10px] text-slate-400 block">Connected Ideas • Software Development &amp; IT Solutions</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-6 text-sm text-slate-400">
-                    <a href="https://github.com/khoirul-amin" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-github text-lg mr-1"></i> GitHub (khoirul-amin)</a>
-                    <a href="https://wa.me/6287819454578" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp text-lg mr-1"></i> WhatsApp</a>
-                </div>
-            </div>
-            <div class="text-center text-xs text-slate-500 mt-8">
-                &copy; 2026 Singkil Project. All rights reserved. Designed for professional software offerings.
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
+
 </html>
